@@ -1,3 +1,3 @@
-# react-mini-projects
+# Javascript-mini-projects
 
 ### Color Flipper
