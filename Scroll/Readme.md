@@ -3,7 +3,7 @@
 ## Scroll Project
 
 ## Project Site URL
-- Live Site URL: [Visit here]() :rocket:
+- Live Site URL: [Visit here](https://scroll-navigation-page.netlify.app/) :rocket:
 
 ## Screenshot
 ![image](https://user-images.githubusercontent.com/102862547/229408596-57d72db0-6b44-4ee0-933d-f7e8916a1f4a.png)
