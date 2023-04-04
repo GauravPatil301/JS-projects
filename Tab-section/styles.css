@@ -227,6 +227,7 @@ About
   border-top-right-radius: var(--radius);
 }
 .tab-btn {
+  text-align: center;
   padding: 1rem 0;
   border: none;
   text-transform: capitalize;
