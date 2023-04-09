@@ -22,14 +22,27 @@ function addItem(e) {
     e.preventDefault();
     const value = grocery.value;
     const id = new Date().getTime().toString();
-    if(value !== '' && editFlag === false){
-
-    }else if(value !== '' && editFlagg === true){
-
+    if(value && !editFlag){
+        console.log("Add item to the list");
+    }else if(value && editFlag){
+        console.log("editing");
     }else{
-        console.log("empty value");
+        displayAlert("Please enter value","danger");
     }
 }
+
+// Display Alert
+function displayAlert(text,action) {
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
+
+    // remove alert 
+    setTimeout(function () {
+        alert.textContent = "";
+        alert.classList.remove(`alert-${action}`);
+    },1000)
+}
+
 // *************** Local Storage ***************
 
 
