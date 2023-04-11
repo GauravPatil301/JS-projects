@@ -18,11 +18,13 @@ let editID = "";
 form.addEventListener("submit",addItem);
 
 // *************** Functions *******************
+// submit form
 function addItem(e) {
     e.preventDefault();
     const value = grocery.value;
+    
     const id = new Date().getTime().toString();
-    if(value && !editFlag){
+    if (value && !editFlag){
         const element = document.createElement('article');
         // add class
         element.classList.add('grocery-item');
@@ -30,7 +32,8 @@ function addItem(e) {
         const attr = document.createAttribute('data-id');
         attr.value = id;
         element.setAttributeNode(attr);
-        element.innerHTML = `<p class="title">${value}</p>
+        element.innerHTML = `
+        <p class="title">${value}</p>
         <div class="btn-container">
             <button type="button" class="edit-btn">
                 <i class="fas fa-edit"></i>
@@ -39,32 +42,43 @@ function addItem(e) {
                 <i class="fas fa-trash"></i>
             </button>
         </div>`;
+
         // append child
         list.appendChild(element);
         // display alert
         displayAlert('item added to the list','success')
         // show container
-        container.classList.add("show-container");  
+        container.classList.add("show-container");
+        // add to local storage
+        addToLocalStorage(id,value);
+        // set back to default
+        setBackToDefault()
     }else if(value && editFlag){
         console.log("editing");
     }else{
-        displayAlert("Please enter value","danger");
+        displayAlert("please enter value","danger")
     }
 }
 
-// Display Alert
+// Display Alert  
 function displayAlert(text,action) {
     alert.textContent = text;
     alert.classList.add(`alert-${action}`);
 
-    // remove alert 
-    setTimeout(function () {
+    // remove alert
+    setTimeout(() => {
         alert.textContent = "";
         alert.classList.remove(`alert-${action}`);
-    },1000)
-}   
+    }, 1000);
+}
+//  set back to default
+function setBackToDefault() {
+    console.log("set back to default");
+}
 
 // *************** Local Storage ***************
-
+function addToLocalStorage(id,value) {
+    console.log("added to local storage");
+}
 
 // *************** Setup Items *****************
