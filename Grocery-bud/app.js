@@ -16,6 +16,8 @@ let editID = "";
 // *************** Event Listeners *************
 // Submit form
 form.addEventListener("submit",addItem);
+// clear items
+clearBtn.addEventListener('click',clearItems)
 
 // *************** Functions *******************
 // submit form
@@ -71,9 +73,26 @@ function displayAlert(text,action) {
         alert.classList.remove(`alert-${action}`);
     }, 1000);
 }
+// clear items
+function clearItems() {
+    const items = document.querySelectorAll(".grocery-item");
+    if(items.length > 0){
+        items.forEach(function (item) {
+            list.removeChild(item);
+        });
+    }
+    container.classList.remove("show-container");
+    displayAlert("empty list","danger");
+    setBackToDefault();
+    // local Storage.removeItem('list');
+}
+
 //  set back to default
 function setBackToDefault() {
-    console.log("set back to default");
+    grocery.value = "";
+    editFlag = false;
+    editID = "";
+    submitBtn.textContent = "submit";
 }
 
 // *************** Local Storage ***************
