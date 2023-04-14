@@ -2,11 +2,11 @@
 
 ## Reviews Generator
 
-## Screenshot
-![review](https://user-images.githubusercontent.com/102862547/227445519-345b12f9-e068-4b98-836a-75869a8999ee.png)
-
 ## Project Site URL
 - Live Site URL: [Visit here](https://review-template-generator.netlify.app/) :rocket:
+
+## Screenshot
+![review](https://user-images.githubusercontent.com/102862547/227445519-345b12f9-e068-4b98-836a-75869a8999ee.png)
 
 ## Built with
 - HTML
